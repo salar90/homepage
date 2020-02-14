@@ -1,9 +1,17 @@
+body{
+    background-color: #222;
+    color: #FFF;
+}
 #main{
-    padding-top: 18vh;
+    padding-top: 15vh;
 }
 
 #main-photo{
+    display: inline-block;
+    max-width: 200px;
     img{
-        max-width: 200px;
+        display: block;
+        max-width: 100%;
+        border:3px solid #FFF;
     }
 }
