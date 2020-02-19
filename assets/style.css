@@ -61,3 +61,11 @@ body.dark {
   background-color: #222222;
   color: #FFFFFF;
 }
+
+body.dark .social-profiles .medium a {
+  color: #FFFFFF;
+}
+
+body.dark .social-profiles .github a {
+  color: #FFFFFF;
+}

@@ -60,4 +60,12 @@ body{
 body.dark{
     background-color: #222222;
     color: #FFFFFF;
+    .social-profiles{
+        .medium a {
+            color: #FFFFFF;
+        }
+        .github a {
+            color: #FFFFFF;
+        }
+    }
 }
