@@ -1,3 +1,12 @@
+$color-instagram: #c32aa3;
+$color-linkedin: #007bb5;
+$color-telegram: #0088cc;
+$color-twitter: #1da1f2;
+$color-youtube: #ff0000;
+$color-github: #333333;
+$color-medium: #333333;
+
+
 body{
     background-color: #FFFFFF;
     color: #222222;
@@ -13,6 +22,37 @@ body{
         display: block;
         max-width: 100%;
         border:3px solid var(--yellow);
+    }
+}
+
+.social-profiles{
+    font-size: 2.5rem;
+    ul{
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        li{
+            display: inline-block;
+        }
+    }
+    .telegram a{
+        color: $color-telegram;
+    }
+    .instagram a{
+        color: $color-instagram;
+    }
+    .medium a{
+        color: $color-medium;
+    }
+    .twitter a{
+        color: $color-twitter;
+    }
+    .github a{
+        color: $color-github;
+    }
+    .linkedin a{
+        color: $color-linkedin;
     }
 
 }
