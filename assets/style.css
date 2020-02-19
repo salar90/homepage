@@ -1,6 +1,6 @@
 body {
-  background-color: #222;
-  color: #FFF;
+  background-color: #FFFFFF;
+  color: #222222;
 }
 
 #main {
@@ -15,5 +15,10 @@ body {
 #main-photo img {
   display: block;
   max-width: 100%;
-  border: 3px solid #FFF;
+  border: 3px solid var(--yellow);
+}
+
+body.dark {
+  background-color: #222222;
+  color: #FFFFFF;
 }
