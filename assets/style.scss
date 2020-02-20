@@ -56,6 +56,19 @@ body{
     }
 
 }
+#dark-switch{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    text-align: center;
+    .switch-on{
+        display: inline-block;
+    }
+    .switch-off{
+        display: none;
+    }
+}
 
 body.dark{
     background-color: #222222;
@@ -66,6 +79,14 @@ body.dark{
         }
         .github a {
             color: #FFFFFF;
+        }
+    }
+    #dark-switch{
+        .switch-on{
+            display: none;
+        }
+        .switch-off{
+            display: inline-block;
         }
     }
 }

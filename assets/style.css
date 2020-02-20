@@ -57,6 +57,22 @@ body {
   color: #007bb5;
 }
 
+#dark-switch {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  text-align: center;
+}
+
+#dark-switch .switch-on {
+  display: inline-block;
+}
+
+#dark-switch .switch-off {
+  display: none;
+}
+
 body.dark {
   background-color: #222222;
   color: #FFFFFF;
@@ -68,4 +84,12 @@ body.dark .social-profiles .medium a {
 
 body.dark .social-profiles .github a {
   color: #FFFFFF;
+}
+
+body.dark #dark-switch .switch-on {
+  display: none;
+}
+
+body.dark #dark-switch .switch-off {
+  display: inline-block;
 }
