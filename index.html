@@ -39,6 +39,11 @@
     </div>
 
     <script>
+        var isDark = localStorage.getItem('isDark');
+        if(isDark && isDark != 'false'){
+            document.body.classList.add('dark');
+        }
+        
         document.getElementById("dark-switch").onclick = function (e) {
             var isDark = document.body.classList.contains('dark');
             if(isDark){
@@ -46,6 +51,9 @@
             }else{
                 document.body.classList.add('dark');
             }
+            isDark = !isDark;
+            localStorage.removeItem('isDark');
+            localStorage.setItem('isDark', isDark);
         };
     </script>
 </body>
