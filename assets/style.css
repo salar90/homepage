@@ -73,6 +73,15 @@ body {
   display: none;
 }
 
+.recent-entries ul {
+  list-style: none;
+  padding-inline-start: 1rem;
+}
+
+.recent-entries ul a {
+  color: #006666;
+}
+
 body.dark {
   background-color: #222222;
   color: #FFFFFF;
@@ -84,6 +93,10 @@ body.dark .social-profiles .medium a {
 
 body.dark .social-profiles .github a {
   color: #FFFFFF;
+}
+
+body.dark .recent-entries ul a {
+  color: #5fffff;
 }
 
 body.dark #dark-switch .switch-on {
