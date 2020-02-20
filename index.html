@@ -33,7 +33,20 @@
 
     </div>
 
+    <div id="dark-switch">
+        <img src="./assets/images/light-bulb-off.svg" alt="dark mode" class="switch-off">
+        <img src="./assets/images/light-bulb-off.svg" alt="dark mode" class="switch-on">
+    </div>
+
     <script>
+        document.getElementById("dark-switch").onclick = function (e) {
+            var isDark = document.body.classList.contains('dark');
+            if(isDark){
+                document.body.classList.remove('dark');
+            }else{
+                document.body.classList.add('dark');
+            }
+        };
     </script>
 </body>
 </html>
