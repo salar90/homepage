@@ -29,7 +29,7 @@
                 </ul>
             </div>
 
-            <div class="recent-entries d-flex justify-content-center">
+            <div id="recent-entries" class="recent-entries d-flex justify-content-center">
                 <div>
                     <h2 class="h4 font-weight-light">Recent entries</h2>
                     <ul class="d-inline-block">
@@ -67,6 +67,21 @@
             localStorage.removeItem('isDark');
             localStorage.setItem('isDark', isDark);
         };
+    </script>
+
+    <script>
+        const FeedLinks = {
+            init: function (url) {
+                fetch(url,{})
+                .then(function (response) {
+                    this.render(response.json());
+                })
+            },
+            render: (jsonData) => {
+                
+            }
+        };
+        FeedLinks.init("data.json");
     </script>
 </body>
 </html>
