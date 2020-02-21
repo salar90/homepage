@@ -32,12 +32,11 @@
             <div id="recent-entries" class="recent-entries d-flex justify-content-center">
                 <div>
                     <h2 class="h4 font-weight-light">Recent entries</h2>
-                    <ul class="d-inline-block">
-                        <li><a href="#">this a link to blog</a></li>
-                        <li><a href="#">this a link to Medium</a></li>
-                        <li><a href="#">And this may be to Linkedin</a></li>
-                        <li><a href="#">Oh another link to somewhere else</a></li>
-                    </ul>
+                    <ul class="d-inline-block"></ul>
+                    <template id="entry-template">
+                        <li><a href=""></a></li>
+                    </template>
+                    
                 </div>
             </div>
         </div>
@@ -73,14 +72,26 @@
         const FeedLinks = {
             init: function (url) {
                 fetch(url,{})
-                .then(function (response) {
-                    this.render(response.json());
+                .then( response => {
+                    return response.json();
+                })
+                .then( jsonData => {
+                    this.render(jsonData);
                 })
             },
             render: (jsonData) => {
-                
+                var list = document.querySelector('#recent-entries ul');
+                var template = document.getElementById('entry-template');
+                jsonData.entries.map((entry) => {
+                    var li = template.content.cloneNode(true);
+                    var a = li.querySelector('a');
+                    a.setAttribute('href', entry.link);
+                    a.textContent = entry.title;
+                    list.appendChild(li);
+                });
             }
         };
+        
         FeedLinks.init("data.json");
     </script>
 </body>
