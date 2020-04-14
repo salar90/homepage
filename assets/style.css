@@ -74,6 +74,10 @@ body {
   display: none;
 }
 
+.loading {
+  color: var(--yellow);
+}
+
 .recent-entries ul {
   list-style: none;
   padding-inline-start: 1rem;
